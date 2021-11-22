@@ -1,0 +1,25 @@
+running multiple jobs in diffrent different nodes.
+jenkins 
+creating two nodes :
+manage jenkins ---> Manage Nodes --> only keep the master node 
+node means a separate entity where the whole configuration can be  similaar kind of configurations are there and 
+same kind of stuffs can be created in that particular instance .
+In this kind of scenario we can have three different machines .
+or in the same machine we can create three different environment in which the jobs will run parallely .
+so if we want many jobs to run in parallel then we can do that by running them on nodes.
+creating three different instances :
+Manage Jenkins ---> Manage Nodes ---> New Node --> give descripiton ---> number of executors 
+--> provide the remote directory .--> labels we can also give a new identification to the node 
+---> Usage --> Launch Method(decides for launching agent agents via SSH/launch agent by connecting it to teh master node)
+--> Availability --> Node Properties 
+ways of connecting the agent to jenkins through on the se ways:
+1) Launch agent from browser .
+2) Run from agent command line .
+
+java -jar agent.jar -jnlpurl
+creting and making sure in which node we are goign to run the job .
+
+restrict where the project can be run .
+new item --> post build options if we do not provide the name of teh slave it will by default run on the master slave .
+parallel nodes is must required for the bigger jobs to run . because if we run a job that takes 3 hrs and 
+we are not able to run the other ones then we need the parallel nodes to run the jobs .
